@@ -243,18 +243,19 @@ a {
 }
 
 .item-info {
-  width: 320px;
-  display: none;
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+  width: 330px;
   background-color: rgba(0, 0, 0, 0.3);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(230, 175, 107);
-  padding: 10px 5px 10px 5px;
+  color: rgb(177, 115, 39);
+  padding: 10px 5px 15px 15px;
 }
-.item:hover > .item-info {
+.item-name {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.item:hover > .d-none {
   display: block;
+  animation: slide-top;
 }
 
 .banner-name {
@@ -280,7 +281,7 @@ a {
 .service {
   text-align: center;
 }
-.icon {
+.icon-service {
   max-width: 100%;
   margin: 0 auto 27px;
 }
@@ -291,16 +292,116 @@ a {
 }
 .footer {
   display: inline-flex;
-  width: 1430px;
+  width: 100%;
   height: 500px;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-evenly;
   background-color: rgb(180, 110, 24);
+  padding-top: 40px;
 }
-.footer-item {
-  color: rgb(231, 170, 96);
+.footer-name {
+  color: rgb(241, 184, 113);
   font-size: 25px;
   width: 150px;
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 30px;
+}
+
+.icon1,
+.icon2,
+.icon3 {
+  margin: 10px;
+  padding: 15px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 85px;
+  left: 59px;
+}
+
+.d-none {
+  display: none;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+.icon1 {
+  animation: slide-top 170ms linear 0s both;
+}
+.icon2 {
+  animation: slide-top 170ms linear 0.075s both;
+}
+.icon3 {
+  animation: slide-top 170ms linear 0.15s both;
+}
+.icon1:hover,
+.icon2:hover,
+.icon3:hover {
+  background-color: rgb(180, 110, 24);
+}
+.mr20 {
+  margin-right: 20px;
+}
+.logo {
+  display: none;
+  padding: 100px;
+  padding-bottom: 96px;
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  background-color: rgba(180, 110, 24, 0.5);
+  animation: scale-up-ver-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.pr {
+  position: relative;
+}
+.pr:hover > .logo {
+  display: block;
+}
+@keyframes scale-up-ver-center {
+  0% {
+    transform: scaleY(0.4);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.footer-menu {
+  display: inline-block;
+  justify-content: center;
+}
+.contact {
+  display: block;
+  margin-bottom: 20px;
+}
+.contact:hover {
+  color: white;
+}
+.mb50 {
+  margin-bottom: 50px;
+}
+.more2 {
+  position: relative;
+  left: 600px;
+  padding: 30px 40px 30px 40px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: rgb(150, 90, 17);
+}
+
+.more2:hover {
+  background-color: #444444;
 }
